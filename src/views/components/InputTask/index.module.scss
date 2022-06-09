@@ -1,28 +1,58 @@
-.inputPlus{
-  width: 100%;
+.inputTask {
   display: grid;
-  grid-template-columns: 1fr 60px;
+  grid-template-columns: 1fr 50px 50px;
   margin-bottom: 15px;
-  &Value{
-    border: 1px solid #b1b1b1;
-    border-radius: 5px 0 0 5px;
-    padding: 9px 10px;
-    font: 1rem/1.4 'Roboto', 'sans-serif';
-    background: #dbe2ef;
-    &::placeholder{
-      color: #7b7b7b;
-    }
-  }
-  &Button{
-    border-radius: 0 5px 5px 0;
-    border: none;
+  background: #dbe2ef;
+  border-radius: 5px;
+  padding-right: 10px;
+
+  &Label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 12px 15px;
     cursor: pointer;
-    background: #3f72af url("./img/plus.svg") no-repeat center center;
+    //gap: 10px;
+  }
+
+  &Checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  &TitleEdit{
+    font: 1rem/1em 'Roboto', sans-serif;
+    line-height: 1.2;
+    border: none;
+    padding: 5px;
+    background: none;
+    box-shadow: 0 4px 0 -3px #3F72AF;
+  }
+
+  &Title {
+    padding: 5px;
+    line-height: 1.2;
+    font: 1rem/1em 'Roboto', sans-serif;
+  }
+
+  &Edit, &Remove, &Save{
+    display: block;
+    border: none;
+    background: none no-repeat center center;
+    cursor: pointer;
+    padding: 0;
     transition: opacity 0.3s;
     &:hover{
       opacity: 0.7;
     }
   }
-
-
+  &Edit{
+    background-image: url("img/edit.svg");
+  }
+  &Remove{
+    background-image: url("img/trash.svg");
+  }
+  &Save{
+    background-image: url("img/check.svg");
+  }
 }
