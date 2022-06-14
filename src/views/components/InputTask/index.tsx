@@ -28,6 +28,7 @@ export const InputTask: React.FC<InputTaskProps> =
                 editTitleInputRef?.current?.focus();
             }
         }, [isEditMode])
+        
         return (
             <div className={styles.inputTask}>
                 <label className={styles.inputTaskLabel}>
